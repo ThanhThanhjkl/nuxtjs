@@ -1,0 +1,4 @@
+{
+    "prettier.endOfLine": "auto",
+    "terminal.integrated.defaultProfile.windows": "Git Bash"
+}
