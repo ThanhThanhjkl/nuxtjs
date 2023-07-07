@@ -1,6 +1,7 @@
 import { getField, updateField } from "vuex-map-fields";
 
 const SET_API = "SET_API";
+const SET_CURRENT_PAGE = "SET_CURRENT_PAGE";
 
 export default {
     state: () => ({
@@ -28,9 +29,10 @@ export default {
             });
         },
 
-        setCurrentPage(state, page) {
-            state.currentPage = page;
-        },
+        setCurrentPage({ commit }, payload) {
+            commit(SET_CURRENT_PAGE, payload);
+          },
+      
     },
 
     mutations: {
@@ -38,6 +40,10 @@ export default {
 
         SET_API(state, payload) {
             state.api = payload;
+        },
+
+        SET_CURRENT_PAGE(state, page) {
+            state.currentPage = page;
         },
     },
 };
